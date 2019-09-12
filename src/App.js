@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import HikingTracker from "./components/HikingTracker";
+import { Container as BootstrapContainer } from "reactstrap";
+import styled from "styled-components";
+import * as Palette from "./components/Palette";
+
+const Container = styled.div`
+  background-image: linear-gradient(
+    to right bottom,
+    ${Palette.Primary},
+    ${Palette.AltPrimary}
+  );
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <HikingTracker />
+    </Container>
   );
 }
 

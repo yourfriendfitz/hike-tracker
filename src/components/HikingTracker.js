@@ -101,7 +101,8 @@ const HikingTracker = props => {
               <ImgContainer key={i}>
                 {" "}
                 <a
-                  href={`https://www.maps.google.com/?q=${location.lat},${location.long}`}
+                  href={`http://www.google.com/maps/place/${location.lat},${location.long}`}
+                  
                   target="_blank"
                 >
                   {" "}

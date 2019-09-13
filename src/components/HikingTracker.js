@@ -100,9 +100,15 @@ const HikingTracker = props => {
           ? props.coords.map((location, i) => (
               <ImgContainer key={i}>
                 {" "}
-                <Img
-                  src={`https://maps.googleapis.com/maps/api/staticmap?center="${location.lat},${location.long}"&zoom=14&size=300x300&sensor=false&key=AIzaSyARtOJmZzZmq5Tt0GPd4pCNw8zA3-1Q3is`}
-                />
+                <a
+                  href={`https://www.google.com/maps/@${location.lat},${location.long}`}
+                  target="_blank"
+                >
+                  {" "}
+                  <Img
+                    src={`https://maps.googleapis.com/maps/api/staticmap?center="${location.lat},${location.long}"&zoom=14&size=300x300&sensor=false&key=AIzaSyARtOJmZzZmq5Tt0GPd4pCNw8zA3-1Q3is`}
+                  />
+                </a>
                 <DeleteCoordButton>
                   <DeleteIcon role="img" aria-label="none">
                     X

@@ -138,6 +138,8 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+// redux
+
 const mapStateToProps = state => {
   return {
     coords: state.coords
